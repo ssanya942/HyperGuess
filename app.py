@@ -14,6 +14,9 @@ with open(PREDICTIONS_CACHE, "r") as f:
 
 # === App Title ===
 st.title("🧠 HyperGuess")
+st.markdown(
+    "_👀 Look at the silicon phantom image and decide — is it **Normal** or **Pathological**?_"
+)
 
 # === Initialize session state ===
 if "current_idx" not in st.session_state:
@@ -55,7 +58,9 @@ if not st.session_state.round_complete:
     audience_choice = st.radio(
         "What do you think this is?",
         ("Normal", "Pathological"),
-        index=0 if st.session_state[f"choice_{st.session_state.current_idx}"] == "Normal" else 1,
+        index=0
+        if st.session_state[f"choice_{st.session_state.current_idx}"] == "Normal"
+        else 1,
         key=f"radio_{st.session_state.current_idx}",
     )
     st.session_state[f"choice_{st.session_state.current_idx}"] = audience_choice
@@ -72,7 +77,7 @@ if not st.session_state.round_complete:
     # === Check Answer button ===
     if st.button("✅ Check Answer"):
         model_label = img["label"]
-        ground_truth = 'Normal' if model_label == 0 else 'Pathological'
+        ground_truth = "Normal" if model_label == 0 else "Pathological"
         audience_ans = audience_choice
         st.session_state.audience_answers[img["file"]] = audience_ans
 
@@ -89,7 +94,7 @@ if not st.session_state.round_complete:
 
         st.progress(
             (st.session_state.current_idx + 1) / len(images),
-            text=f"Question {st.session_state.current_idx + 1} of {len(images)}"
+            text=f"Question {st.session_state.current_idx + 1} of {len(images)}",
         )
 
 # === Round Complete Screen ===
@@ -98,14 +103,15 @@ else:
     correct = 0
     for img in images:
         fname = img["file"]
-        gt = 'Normal' if img["label"] == 0 else 'Pathological'
+        gt = "Normal" if img["label"] == 0 else "Pathological"
         if st.session_state.audience_answers.get(fname) == gt:
             correct += 1
 
     st.success("✅ You've completed all 5 questions!")
-    st.markdown(f"### 🧮 Your Score: {correct} / {len(images)} ")
+    st.markdown(f"### 🧮 Your Score: **{correct} / {len(images)}**")
 
     if st.button("🔁 Restart"):
+        # Reset all session state
         st.session_state.current_idx = 0
         st.session_state.round_complete = False
         st.session_state.audience_answers = {}
