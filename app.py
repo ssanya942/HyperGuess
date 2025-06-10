@@ -70,9 +70,15 @@ if not st.session_state.round_complete:
     if col1.button("⬅️ Previous"):
         st.session_state.current_idx = max(0, st.session_state.current_idx - 1)
         st.rerun()
-    if col2.button("Next ➡️"):
-        st.session_state.current_idx = min(len(images), st.session_state.current_idx + 1)
-        st.rerun()
+
+    if st.session_state.current_idx < len(images) - 1:
+        if col2.button("Next ➡️"):
+            st.session_state.current_idx += 1
+            st.rerun()
+    else:
+        if col2.button("🏁 Check Results"):
+            st.session_state.round_complete = True
+            st.rerun()
 
     # === Check Answer button ===
     if st.button("✅ Check Answer"):
@@ -111,7 +117,6 @@ else:
     st.markdown(f"### 🧮 Your Score: **{correct} / {len(images)}**")
 
     if st.button("🔁 Restart"):
-        # Reset all session state
         st.session_state.current_idx = 0
         st.session_state.round_complete = False
         st.session_state.audience_answers = {}
