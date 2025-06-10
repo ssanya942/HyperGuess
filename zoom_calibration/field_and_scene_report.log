@@ -1,0 +1,21 @@
+data:
+  average_count_in_mask: 620.0784671532847
+  average_counts: 5441.230332522303
+  estimated_peak: 595.37
+  fraction_counts_in_mask: 0.11395923793315887
+  original_offsets:
+  - 62.0
+  - 148.0
+  pass_average_count_in_mask_check: true
+  pass_average_counts_check: true
+  pass_fraction_counts_in_mask_check: true
+  peak_in_gap: true
+  scene_offsets:
+  - -3
+  - -18
+  scene_test_pass: true
+  spike_test: true
+  tested_offsets:
+  - -3
+  - -18
+passed_checks: true

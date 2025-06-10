@@ -1,0 +1,9 @@
+INFO - STARTING CALIBRATION VALIDATION
+INFO - Pass scene iou test (%): True
+INFO - Peak scene overlap (%): metric.max()=99.13728432108027
+INFO - Current Scene alignment: preview_offsets=[-3, -18]
+INFO - Suggested preview alignment: (-3, -18)
+INFO - Scene alignment test PASSED: threshold 4
+INFO - Macbeth SA test pass: True | sa_mean=0.06588049161888627< Limit sa_limit=0.1
+INFO - OVERALL TEST RESULT: PASS
+INFO - END VALIDATION

@@ -1,0 +1,26 @@
+INFO - STARTING SELF TEST
+INFO - PASS MEAN RATIO SELF TEST: 1.0134929804859354
+INFO - PASS MEDIAN RATIO SELF TEST: 1.011977342921543
+INFO - PASS MEAN RATIO SELF TEST: 1.0134011900297353
+INFO - PASS MEDIAN RATIO SELF TEST: 1.0118697290506717
+INFO - PASS MEAN RATIO SELF TEST: 1.013523746802436
+INFO - PASS MEDIAN RATIO SELF TEST: 1.0119892989152919
+INFO - repeat1_empty.loraw
+INFO - Self-referential  SA test pass: True | self_sa_percentile=0.014379050868995245< Limit sa_limit=0.05
+INFO - Bad pixel  test pass: True | bad_pixel_count=0< Limit bad_pixel_limit=150
+INFO - repeat2_holmium.loraw
+INFO - Self-referential  SA test pass: True | self_sa_percentile=0.022386426529122434< Limit sa_limit=0.05
+INFO - Bad pixel  test pass: True | bad_pixel_count=0< Limit bad_pixel_limit=150
+INFO - repeat0_didymium.loraw
+INFO - Self-referential  SA test pass: True | self_sa_percentile=0.03803546502172202< Limit sa_limit=0.05
+INFO - Bad pixel  test pass: True | bad_pixel_count=58< Limit bad_pixel_limit=150
+INFO - DTW dtw_validation alignment test pass: True | alignment.distance=0.5687591670142663< Limit alignment_distance_limit=4
+INFO - Wavelength shift dtw_validation: blue test pass: True | rel_shift=0.015084158991681725< Limit rel_shift_limit=0.1
+INFO - Wavelength shift dtw_validation: green test pass: True | rel_shift=0.013165922742303058< Limit rel_shift_limit=0.1
+INFO - Wavelength shift dtw_validation: red test pass: True | rel_shift=0.001573431528973563< Limit rel_shift_limit=0.1
+INFO - DTW dtw_validation alignment test pass: True | alignment.distance=1.2063969195041528< Limit alignment_distance_limit=4
+INFO - Wavelength shift dtw_validation: blue test pass: True | rel_shift=0.0429703581399596< Limit rel_shift_limit=0.1
+INFO - Wavelength shift dtw_validation: green test pass: False | rel_shift=0.1261730173029127< Limit rel_shift_limit=0.1
+INFO - Wavelength shift dtw_validation: red test pass: True | rel_shift=0.06970791196937791< Limit rel_shift_limit=0.1
+INFO - OVERALL TEST RESULT: PASS
+INFO - END SELF TEST

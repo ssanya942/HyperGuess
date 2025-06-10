@@ -1,0 +1,16 @@
+data:
+  macbeth_filtered_report:
+    macbeth_filter_report:
+      average_count_in_mask: 620.0784671532847
+      average_counts: 5441.230332522303
+      fraction_counts_in_mask: 0.11395923793315887
+      pass_average_count_in_mask_check: true
+      pass_average_counts_check: true
+      pass_fraction_counts_in_mask_check: false
+  macbeth_report: 0.06588049161888627
+  scene_report:
+    Macbeth Scene alignment offsets:
+    - -3
+    - -18
+    Macbeth Scene alignment passes: true
+passed_checks: true
