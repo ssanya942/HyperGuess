@@ -5,8 +5,8 @@ import random
 from PIL import Image
 
 # === Configuration ===
-PREDICTIONS_CACHE = "/Users/sanya/Develop/lo_own_test/MBLL/app/predictions_cache.json"
-RGB_IMAGE_DIR = "/Users/sanya/Develop/lo_own_test/MBLL/app/phantom_images_rgb"
+PREDICTIONS_CACHE = "predictions_cache.json"
+RGB_IMAGE_DIR = "phantom_images_rgb"
 
 # === Load predictions ===
 with open(PREDICTIONS_CACHE, "r") as f:
